@@ -1,0 +1,135 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  font-size: 13px;
+}
+.all {
+  display: flex;
+  perspective: 10px;
+  transform: perspective(250px) rotateX(60deg);
+  will-change: perspective;
+  perspective-origin: center center;
+  transition: all 1.3s ease-out;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+.all:hover {
+  perspective: 1000px;
+  transition: all 1s ease-in;
+  transform: perspective(10000px) rotateX(0deg);
+}
+.all:hover .text {
+  opacity: 2;
+  filter: blur(4px);
+}
+.all:hover div {
+    opacity: 1;
+    filter: blur(4px);
+    transition-delay: 0s;
+}
+.all div:hover{
+	filter: blur(0);
+}
+.all div:hover .text{
+	filter: blur(0);
+}
+.all:hover .explainer {
+   opacity: 0;
+}
+.left, .center, .right, .lefter, .righter {
+  width: 100px;
+  height: 75px;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  opacity: 0;
+  transition: all .3s ease;
+  transition-delay: 1s;
+  position: relative;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #58d;
+  cursor: pointer;
+  background-blend-mode: color-burn;
+  margin-bottom: 10px;
+} 
+.text {
+  transform: translateY(30px);
+  opacity: 0;
+  margin-top: 5px;
+  transition: all .3s ease;
+  bottom: -8px;
+  left: 5px;
+  position: absolute;
+  will-change: transform;
+  color: #000;
+  text-shadow: 0 0 5px rgba(100, 100, 255, .6)
+}
+.lefter {
+  transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/organization-512.png);
+}
+.left {
+  transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/creative_draw-512.png);
+}
+.center {
+  opacity: 1;
+  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/app_window-512.png);
+}
+.right {
+  transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/cloud_weather-512.png);
+}
+.righter {
+  transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/search-512.png);
+}
+.lefter:hover {
+	box-shadow: 0px 0px 10px #000;
+	transition: all 0.5s ease;
+	filter: blur(0);
+}
+.left:hover {
+	box-shadow: 0px 0px 10px #000;
+	transition: all 0.5s ease;
+	filter: blur(0);
+}
+.center:hover {
+	box-shadow: 0px 0px 10px #000;
+	transition: all 0.5s ease;
+	filter: blur(0);
+}
+.right:hover {
+	box-shadow: 0px 0px 10px #000;
+	transition: all 0.5s ease;
+	filter: blur(0);
+}
+.righter:hover {
+	box-shadow: 0px 0px 10px #000;
+	transition: all 0.5s ease;
+	filter: blur(0);
+}
+.explainer {
+  font-size: 20px;
+  color: #fff;
+  transition: all .6s ease;
+  width: 100%;
+  height: 100%;
+  background-color: #303050;
+  background: #3440aa;
+  border-radius: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0px 0px 5px black;
+}
